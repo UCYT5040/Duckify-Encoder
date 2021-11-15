@@ -33,15 +33,20 @@ duckify.decode("stuff to decode")
 ## How It Works
 Space ( ) shows a new character.
 Every new character has a value.
-Duck (🦆) is worth 1
-Corn (🌽) is worth 10
-Lettuce (🥬) is worth 100
-The following are new and have not been added to the examples below yet.
-broccoli (🥦) is worth 50
-strawberry (🍓) is worth 1000
-It checks how many strawberry it can subtract.
+### Values
+Emoji | Name       | Value
+------|------------|------
+🦆    | Duck       | 1
+🌽    | Corn       | 10
+🥬    | Lettuce    | 100
+🍓\*  | Strawberry | 1000
+🥦\*  | Broccoli   | 5000
+
+\*Not added to examples yet
+
+It checks how many broccoli it can subtract.
 Then, how many lettuce.
-Then, how many broccoli.
+Then, how many strawberry.
 Then, how many corn.
 Last, how many duck.
 
