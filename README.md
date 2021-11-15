@@ -36,9 +36,15 @@ Every new character has a value.
 Duck (🦆) is worth 1
 Corn (🌽) is worth 10
 Lettuce (🥬) is worth 100
-It checks how many lettuce it can subtract.
+The following are new and have not been added to the examples below yet.
+broccoli (🥦) is worth 50
+strawberry (🍓) is worth 1000
+It checks how many strawberry it can subtract.
+Then, how many lettuce.
+Then, how many broccoli.
 Then, how many corn.
 Last, how many duck.
+
 ### Examples
 
 #### Duckify `'a'`

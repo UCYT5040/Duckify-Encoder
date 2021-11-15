@@ -4,7 +4,12 @@
 # duck (🦆) is worth 1
 # corn (🌽) is worth 10
 # lettuce (🥬) is worth 100
-# It checks how many lettuce it can subtract.
+# The following are new and have not been added to the examples below yet.
+# broccoli (🥦) is worth 50
+# strawberry (🍓) is worth 1000
+# It checks how many strawberry it can subtract.
+# Then, how many lettuce.
+# Then, how many broccoli.
 # Then, how many corn.
 # Last, how many duck.
 # Example:
@@ -27,9 +32,15 @@ if mode in ['encode', 'en', 'e', 'enco', 'encoded']:
   output = ""
   for char in toEncode:
     charInt = ord(char)
+    while can_subtract(charInt, 1000):
+      output += '🍓'
+      charInt -= 1000
     while can_subtract(charInt, 100):
       output += '🥬'
       charInt -= 100
+    while can_subtract(charInt, 50):
+      output += '🥦'
+      charInt -= 50
     while can_subtract(charInt, 10):
       output += '🌽'
       charInt -= 10
@@ -47,7 +58,9 @@ elif mode in ['decode', 'de', 'd', 'deco', 'decoded']:
   for char in chars:
     value = 0
     for emoji in char:
-      if emoji == "🥬": value += 100
+      if emoji == "🍓": value += 1000
+      elif emoji == "🥬": value += 100
+      elif emoji == "🥦": value += 50
       elif emoji == "🌽": value += 10
       elif emoji == "🦆": value += 1
     output += chr(value)
@@ -58,9 +71,15 @@ elif mode in ['encodefile', 'enfi', 'ef', 'encofile', 'encodedfile']:
   output = ""
   for char in toEncode:
     charInt = ord(char)
+    while can_subtract(charInt, 1000):
+      output += '🍓'
+      charInt -= 1000
     while can_subtract(charInt, 100):
       output += '🥬'
       charInt -= 100
+    while can_subtract(charInt, 50):
+      output += '🥦'
+      charInt -= 50
     while can_subtract(charInt, 10):
       output += '🌽'
       charInt -= 10
