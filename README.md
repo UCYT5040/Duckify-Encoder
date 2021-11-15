@@ -8,8 +8,28 @@ Download `main.py` and run it.
 
 ### As A Module
 
-Coming soon (real soon)
+Download the `duckify` folder (or just download duckify.py from there.)
 
+If you downloaded the folder:
+```
+|--[main.py]
+|--[duckify]
+   |--[__main__.py]
+   |--[duckify.py (can be deleted)]
+main.py:
+import duckify
+duckify.encode("hi")
+duckify.decode("stuff to decode")
+```
+If you downloaded the file:
+```
+|--[main.py]
+|--[duckify.py]
+main.py:
+import duckify
+duckify.encode("hi")
+duckify.decode("stuff to decode")
+```
 ## How It Works
 Space ( ) shows a new character.
 Every new character has a value.
