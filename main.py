@@ -5,7 +5,7 @@
 # corn (🌽) is worth 10
 # lettuce (🥬) is worth 100
 # The following are new and have not been added to the examples below yet.
-# broccoli (🥦) is worth 50
+# broccoli (🥦) is worth 5000
 # strawberry (🍓) is worth 1000
 # It checks how many strawberry it can subtract.
 # Then, how many lettuce.
@@ -58,9 +58,9 @@ elif mode in ['decode', 'de', 'd', 'deco', 'decoded']:
   for char in chars:
     value = 0
     for emoji in char:
-      if emoji == "🍓": value += 1000
+      if emoji == "🥦": value += 5000
+      elif emoji == "🍓": value += 1000
       elif emoji == "🥬": value += 100
-      elif emoji == "🥦": value += 50
       elif emoji == "🌽": value += 10
       elif emoji == "🦆": value += 1
     output += chr(value)
@@ -71,15 +71,15 @@ elif mode in ['encodefile', 'enfi', 'ef', 'encofile', 'encodedfile']:
   output = ""
   for char in toEncode:
     charInt = ord(char)
+    while can_subtract(charInt, 5000):
+      output += '🥦'
+      charInt -= 5000
     while can_subtract(charInt, 1000):
       output += '🍓'
       charInt -= 1000
     while can_subtract(charInt, 100):
       output += '🥬'
       charInt -= 100
-    while can_subtract(charInt, 50):
-      output += '🥦'
-      charInt -= 50
     while can_subtract(charInt, 10):
       output += '🌽'
       charInt -= 10
